@@ -23,4 +23,10 @@ public class MainFragment extends Fragment {
         mainFragmentBinding.rvMovies.setAdapter(new RecyclerAdapter(getActivity()));
         return mainFragmentBinding.getRoot();
     }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        mainFragmentBinding = null;
+    }
 }
